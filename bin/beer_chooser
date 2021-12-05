@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+$:.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+
+require './lib/beer_chooser'
+
+ui = BeerChooser::UserInterface.new
+
+trap('INT') {
+  ui.quit
+  exit(0)
+}
+
+ui.show_name_prompt
