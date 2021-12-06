@@ -23,5 +23,4 @@ To use the utility just run `./bin/beer_chooser` from the project's root directo
 To execute tests just run `rspec` from the project's root directory.
 
 ## TODOs
-1. Write tests for the `BeerChooser::UserInterface` class
-2. Add in-code documentation, e.g. `RDoc`
+1. Add in-code documentation, e.g. `RDoc`

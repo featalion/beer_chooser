@@ -7,9 +7,9 @@ module BeerChooser
 
     PER_PAGE = 10.freeze
 
-    def initialize
+    def initialize(client = nil)
       CLI::UI::StdoutRouter.enable
-      @client = BeerChooser::APIClient.new
+      @client = client || BeerChooser::APIClient.new
     end
 
     def run
