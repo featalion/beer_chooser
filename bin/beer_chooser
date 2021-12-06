@@ -11,4 +11,4 @@ trap('INT') {
   exit(0)
 }
 
-ui.show_name_prompt
+ui.run

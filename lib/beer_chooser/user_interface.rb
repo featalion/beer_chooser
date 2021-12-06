@@ -40,10 +40,6 @@ module BeerChooser
         transitions from: :asking_for_beer_name, to: :searching_beers
       end
 
-      event :beers_found do
-        transitions from: :searching_beers, to: :showing_beers
-      end
-
       event :show_beers do
         transitions from: [:searching_beers, :showing_beers, :showing_beer_details],
                     to: :showing_beers
@@ -72,7 +68,7 @@ module BeerChooser
         handle_error 'Punk API is too slow'
       else
         unless @beers.empty?
-          beers_found
+          show_beers
         else
           puts CLI::UI.fmt '{{x}} {{error:No beers have been found by your request}}'
           show_name_prompt
